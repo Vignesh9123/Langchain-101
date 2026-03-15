@@ -21,7 +21,10 @@ def add(a: int, b: int):
 
 llm = ChatGoogleGenerativeAI(model="gemini-flash-lite-latest")
 
-agent = create_agent(model=llm, tools=[add])
+agent = create_agent(
+    model=llm, 
+    tools=[add]
+)
 
 response = agent.invoke(input={
     "messages":[{
