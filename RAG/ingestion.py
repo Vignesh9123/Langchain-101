@@ -13,7 +13,7 @@ MEDIUM_BLOG_PATH = os.path.join(os.path.dirname(__file__), "mediumblog1.txt")
 loader = TextLoader(MEDIUM_BLOG_PATH, encoding="utf-8")
 document = loader.load()
 
-splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=0)
 
 texts = splitter.split_documents(document)
 
